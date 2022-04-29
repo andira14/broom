@@ -1,11 +1,14 @@
 const fibonacciLoop = (length) => {
+  // Return for known length
   if (length === 0) {
     return [0];
   } else if (length === 1){ 
     return [0,1];
   }
-  const result = [0];
-  result.push(1);
+
+  const result = [0,1];
+
+
   for (let i = 2; i <= length; i++) {
     result.push(result[i - 2] + result[i - 1]);
   }
